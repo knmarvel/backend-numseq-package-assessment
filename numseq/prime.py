@@ -1,18 +1,14 @@
 def primes(n):
-    import math
-    if n < 2:
-        return []
-    else:
-        primes_list = [2]
-        for num in range(3, n, 2):
-            if all(num % i != 0 for i in range(3, int(math.sqrt(num))+1, 2)):
-                primes_list.append(num)
-        return primes_list
+    """given a number, n, returns all prime numbers less than n"""
+    import gmpy2
+    n = 2
+    while True:
+        yield n
+        n = gmpy2.next_prime(n)
 
 
 def is_prime(n):
+    """given a number, n, returns true if the number is prime and false"""
     primes_list = primes(n+1)
     print(primes_list)
     return n in primes_list
-
-print(is_prime(3))

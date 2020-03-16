@@ -2,6 +2,7 @@ mydict = {}
 
 
 def fib(n):
+    """given a number, n, returns the nth number in the fibonacci sequence"""
     if n in mydict:
         return mydict[n]
     if n < 0:
