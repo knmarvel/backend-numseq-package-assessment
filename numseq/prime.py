@@ -24,4 +24,3 @@ false if it's not"""
     print(primes_list)
     return n in primes_list
 
-print(is_prime(3))
